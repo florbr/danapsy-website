@@ -11,7 +11,7 @@ import './App.css';
 function App() {
   return (
     <LanguageProvider>
-      <Router basename="/">
+      <Router basename="/danapsy-website">
         <div className="App">
           <Header />
           <main>
