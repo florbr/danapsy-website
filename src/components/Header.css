@@ -28,6 +28,7 @@
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .nav a {
@@ -40,6 +41,23 @@
 
 .nav a:hover {
   color: var(--accent-color);
+}
+
+.lang-toggle {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.lang-toggle:hover {
+  background-color: var(--white);
+  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {

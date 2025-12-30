@@ -1,15 +1,19 @@
 import { psychologistData } from '../data/psychologistData';
+import { useLanguage } from '../context/LanguageContext';
 import './Services.css';
 
 function Services() {
+  const { language } = useLanguage();
+  const data = psychologistData[language];
+
   return (
     <section id="services" className="services">
       <div className="container">
-        <h2>Areas of Specialization</h2>
+        <h2>{data.sections.specializations}</h2>
         <div className="services-grid">
-          {psychologistData.specializations.map((service, index) => (
-            <div key={index} className="service-card">
-              <h3>{service}</h3>
+          {data.specializations.map((service, index) => (
+            <div key={index} className="service-item">
+              {service}
             </div>
           ))}
         </div>

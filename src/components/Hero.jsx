@@ -1,17 +1,27 @@
-import { Link } from 'react-router-dom';
 import { psychologistData } from '../data/psychologistData';
+import { useLanguage } from '../context/LanguageContext';
 import './Hero.css';
 
 function Hero() {
+  const { language } = useLanguage();
+  const data = psychologistData[language];
+
   return (
     <section className="hero">
       <div className="container">
         <div className="hero-content">
-          <h2>{psychologistData.tagline}</h2>
+          <h2>{data.tagline}</h2>
           <p className="hero-description">
-            A safe, supportive space for healing and personal growth
+            {data.sections.heroDescription}
           </p>
-          <Link to="/contact" className="cta-button">Schedule a Consultation</Link>
+          <a 
+            href={psychologistData.bookingUrl} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="cta-button"
+          >
+            {data.sections.bookButton.replace(' sur Doctolib', '').replace(' on Doctolib', '')}
+          </a>
         </div>
       </div>
     </section>
