@@ -1,0 +1,16 @@
+.approach {
+  background-color: var(--white);
+}
+
+.approach-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--text-color);
+  padding: 2rem;
+  background-color: var(--bg-light);
+  border-radius: 8px;
+  border-left: 4px solid var(--secondary-color);
+}

@@ -1,0 +1,53 @@
+.header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 1.5rem 0;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  margin-bottom: 1rem;
+}
+
+.header h1 {
+  color: var(--white);
+  margin-bottom: 0.2rem;
+  font-size: 1.8rem;
+}
+
+.subtitle {
+  color: var(--accent-color);
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+.nav a:hover {
+  color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .nav {
+    gap: 1rem;
+  }
+}
