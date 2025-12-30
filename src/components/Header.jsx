@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { psychologistData } from '../data/psychologistData';
 import './Header.css';
 
@@ -6,14 +7,16 @@ function Header() {
     <header className="header">
       <div className="container">
         <div className="header-content">
-          <h1>{psychologistData.name}</h1>
+          <Link to="/" style={{ textDecoration: 'none' }}>
+            <h1>{psychologistData.name}</h1>
+          </Link>
           <p className="subtitle">{psychologistData.title}</p>
         </div>
         <nav className="nav">
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#approach">Approach</a>
-          <a href="#contact">Contact</a>
+          <Link to="/">Home</Link>
+          <Link to="/services">Services</Link>
+          <Link to="/approach">Approach</Link>
+          <Link to="/contact">Contact</Link>
         </nav>
       </div>
     </header>

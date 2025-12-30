@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { psychologistData } from '../data/psychologistData';
 import './Hero.css';
 
@@ -10,7 +11,7 @@ function Hero() {
           <p className="hero-description">
             A safe, supportive space for healing and personal growth
           </p>
-          <a href="#contact" className="cta-button">Schedule a Consultation</a>
+          <Link to="/contact" className="cta-button">Schedule a Consultation</Link>
         </div>
       </div>
     </section>
